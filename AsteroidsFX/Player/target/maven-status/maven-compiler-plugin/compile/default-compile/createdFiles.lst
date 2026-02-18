@@ -1,2 +1,5 @@
+dk/sdu/cbse/playersystem/PlayerProcessor.class
+dk/sdu/cbse/playersystem/PlayerPlugin.class
+module-info.class
 dk/sdu/cbse/playersystem/Player.class
 dk/sdu/cbse/playersystem/PlayerSystem.class

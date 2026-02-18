@@ -1,3 +1,6 @@
 /Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/Entity.java
 /Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/GameData.java
 /Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/World.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IEntityProcessorService.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IGamePluginService.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IPostEntityProcessorService.java
