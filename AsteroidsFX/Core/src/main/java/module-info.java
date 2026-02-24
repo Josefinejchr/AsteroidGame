@@ -5,6 +5,8 @@ module Core {
     requires Player;
     requires Bullet;
     requires Enemy;
+    requires Asteroids;
+    requires Collision;
 
     uses dk.sdu.cbse.common.services.IGamePluginService;
     uses dk.sdu.cbse.common.services.IEntityProcessorService;

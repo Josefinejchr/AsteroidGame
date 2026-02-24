@@ -11,7 +11,7 @@ public class PlayerPlugin implements IGamePluginService {
 
     @Override
     public void start(GameData gameData, World world) {
-        player = new Entity();
+        player = new Player();
         player.x = gameData.width / 2.0;
         player.y = gameData.height / 2.0;
 

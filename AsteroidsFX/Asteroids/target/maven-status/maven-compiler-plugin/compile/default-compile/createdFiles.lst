@@ -1,2 +1,3 @@
-dk/sdu/mmmi/cbse/asteroidssystem/AsteroidsProcessor.class
-dk/sdu/mmmi/cbse/asteroidssystem/AsteroidsPlugin.class
+module-info.class
+dk/sdu/cbse/asteroidsystem/AsteroidsProcessor.class
+dk/sdu/cbse/asteroidsystem/AsteroidsPlugin.class

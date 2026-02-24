@@ -1,4 +1,4 @@
-package dk.sdu.mmmi.cbse.asteroidssystem;
+package dk.sdu.cbse.asteroidsystem;
 
 import dk.sdu.cbse.common.Entity;
 import dk.sdu.cbse.common.GameData;
@@ -10,20 +10,18 @@ public class AsteroidsProcessor implements IEntityProcessorService {
     @Override
     public void process(GameData gameData, World world) {
         double dt = gameData.delta;
-        double w = gameData.width;
-        double h = gameData.height;
 
-        for (Entity e : world.getEntities()) {
-            if (!"asteroid".equals(e.tag) || !e.alive) continue;
+        for (Entity a : world.getEntities()) {
+            if (!"asteroid".equals(a.tag) || !a.alive) continue;
 
-            e.x += e.vx * dt;
-            e.y += e.vy * dt;
+            a.x += a.vx * dt;
+            a.y += a.vy * dt;
 
-            // wrap-around
-            if (e.x < 0) e.x += w;
-            if (e.x > w) e.x -= w;
-            if (e.y < 0) e.y += h;
-            if (e.y > h) e.y -= h;
+            // wrap
+            if (a.x < 0) a.x += gameData.width;
+            if (a.x > gameData.width) a.x -= gameData.width;
+            if (a.y < 0) a.y += gameData.height;
+            if (a.y > gameData.height) a.y -= gameData.height;
         }
     }
 }

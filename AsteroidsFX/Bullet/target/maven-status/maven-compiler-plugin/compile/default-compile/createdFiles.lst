@@ -1,2 +1,2 @@
-dk/sdu/cbse/bulletsystem/Bullet.class
-dk/sdu/cbse/bulletsystem/BulletSystem.class
+module-info.class
+dk/sdu/cbse/bulletsystem/BulletProcessor.class

@@ -16,13 +16,18 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ServiceLoader;
 
 public class App extends Application {
 
     private final GameData game = new GameData();
     private final World world = new World();
+
+    // Load once, reuse every frame
+    private final List<IEntityProcessorService> processors = new ArrayList<>();
+    private final List<IPostEntityProcessorService> postProcessors = new ArrayList<>();
 
     @Override
     public void start(Stage stage) {
@@ -42,6 +47,16 @@ public class App extends Application {
             plugin.start(game, world);
         }
 
+        // Load processors once
+        ServiceLoader.load(IEntityProcessorService.class).forEach(processors::add);
+        ServiceLoader.load(IPostEntityProcessorService.class).forEach(postProcessors::add);
+
+        // Debug (optional but helpful)
+        System.out.println("Processors:");
+        processors.forEach(p -> System.out.println(" - " + p.getClass().getName()));
+        System.out.println("Post-processors:");
+        postProcessors.forEach(p -> System.out.println(" - " + p.getClass().getName()));
+
         new AnimationTimer() {
             long last = System.nanoTime();
 
@@ -57,21 +72,18 @@ public class App extends Application {
     }
 
     private void update() {
-        // Run normal processors
-        for (IEntityProcessorService processor : ServiceLoader.load(IEntityProcessorService.class)) {
-            processor.process(game, world);
+        // Normal processors (movement, input, bullets, asteroids, enemy AI...)
+        for (IEntityProcessorService s : processors) {
+            s.process(game, world);
         }
 
-        // Run post processors (collisions etc.)
-        for (IPostEntityProcessorService post : ServiceLoader.load(IPostEntityProcessorService.class)) {
-            post.process(game, world);
+        // Post processors (collision, etc.)
+        for (IPostEntityProcessorService s : postProcessors) {
+            s.process(game, world);
         }
 
         // Remove dead entities
-        Iterator<Entity> it = world.getEntities().iterator();
-        while (it.hasNext()) {
-            if (!it.next().alive) it.remove();
-        }
+        world.getEntities().removeIf(e -> !e.alive);
     }
 
     private String mapKey(KeyCode code) {
@@ -95,11 +107,11 @@ public class App extends Application {
                 drawTriangle(g, e.x, e.y, e.rotation, 16);
 
             } else if ("asteroid".equals(e.tag)) {
-                g.setStroke(Color.LIGHTGRAY);
-                g.strokeOval(e.x - e.radius, e.y - e.radius, e.radius * 2, e.radius * 2);
+                g.setFill(Color.BLUE);
+                g.fillOval(e.x - e.radius, e.y - e.radius, e.radius * 2, e.radius * 2);
 
             } else if ("bullet".equals(e.tag)) {
-                g.setFill(Color.WHITE);
+                g.setFill(Color.BLACK);
                 g.fillOval(e.x - e.radius, e.y - e.radius, e.radius * 2, e.radius * 2);
 
             } else {
