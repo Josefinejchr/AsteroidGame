@@ -21,6 +21,8 @@
     <module>Asteroids</module>
     <module>Enemy</module>
     <module>Collision</module>
+    <module>Scoring</module>
+    <module>ScoringService</module>
   </modules>
 
   <properties>
@@ -103,6 +105,9 @@
           <filesets>
             <fileset>
               <directory>mods-mvn</directory>
+            </fileset>
+            <fileset>
+              <directory>plugins</directory>
             </fileset>
           </filesets>
         </configuration>

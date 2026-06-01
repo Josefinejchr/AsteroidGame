@@ -52,7 +52,7 @@
                   <type>jar</type>
                 </artifactItem>
               </artifactItems>
-              <outputDirectory>../mods-mvn</outputDirectory>
+              <outputDirectory>../plugins</outputDirectory>
             </configuration>
           </execution>
         </executions>
