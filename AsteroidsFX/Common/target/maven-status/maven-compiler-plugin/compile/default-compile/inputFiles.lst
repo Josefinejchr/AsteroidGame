@@ -1,6 +1,9 @@
-/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/Entity.java
-/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/GameData.java
-/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/World.java
-/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IEntityProcessorService.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/data/Destructible.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/data/Entity.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/data/GameData.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/data/GameKeys.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/data/World.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IEntityProcessingService.java
 /Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IGamePluginService.java
-/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IPostEntityProcessorService.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/dk/sdu/cbse/common/services/IPostEntityProcessingService.java
+/Users/josefinejuulchristensen/Desktop/SDU/4semester/Component/AsteroidGame/AsteroidsFX/Common/src/main/java/module-info.java
