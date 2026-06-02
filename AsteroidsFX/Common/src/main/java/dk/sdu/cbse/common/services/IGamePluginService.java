@@ -9,9 +9,10 @@ import dk.sdu.cbse.common.data.World;
 public interface IGamePluginService {
 
     /**
-     * Called once when the game starts. Implementations should create and register their entities into the world.
-     * @param gameData shared game state including display dimensions and input
-     * @param world    the entity container; entities added here will be rendered
+     * Called once when the game starts.
+     * Implementations should create and register their entities into the world.
+     * @param gameData
+     * @param world
      * @pre  gameData and world are fully initialised and non-null
      * @post at least one entity has been added to the world by this plugin
      */
@@ -19,8 +20,8 @@ public interface IGamePluginService {
 
     /**
      * Called once when the game stops. Implementations should remove all entities they created from the world to avoid memory leaks.
-     * @param gameData shared game state
-     * @param world    the entity container to remove entities from
+     * @param gameData
+     * @param world
      * @pre  start has previously been called with the same world instance
      * @post all entities created by this plugin have been removed from world
      */
